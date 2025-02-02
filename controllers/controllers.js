@@ -11,13 +11,18 @@ exports.get = (req,res) => {
     ])
 }
 
-exports.post = (req,res) => {
-    res.status(201).send(req.body)
+exports.post = (req,res,) => {
+    res.status(201).send(req.body) 
+    
 }
 
 exports.put = (req,res) => {
-    res.send("teste controller")
+    const id = req.params.id
+    res.status(200).send({
+        id : id,
+        item: req.body
+    })
 }
 exports.delete = (req,res) => {
-    res.send("teste controller")
+   res.status(200).send(req.body)
 }

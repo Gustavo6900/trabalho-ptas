@@ -2,6 +2,10 @@ const express = require('express')
 const router = express.Router()
 const controller = require('../controllers/controllers')
 
-const create = router.post('/', controller.post)
+router.post('/', controller.post)
+router.put('/:id', controller.put)
+router.delete('/:id', controller.delete)
+
+
 
 module.exports = router

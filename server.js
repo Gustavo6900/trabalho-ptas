@@ -1,10 +1,15 @@
 const express = require('express')
 const app = express()
-const index = require('./rotas/index')
-const create = require('./rotas/create')
+const index = require('./routes/index')
+const rotas = require('./routes/rotas')
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 app.use('/', index)
-app.use('/produtos',  create)
+app.use('/produtos', rotas)
+
+
 
 
 
