@@ -7,7 +7,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 app.use('/', index)
-app.use('/produtos', rotas)
+app.use('/musicas', rotas)
+app.use('/buscar', rotas)
 
 
 
