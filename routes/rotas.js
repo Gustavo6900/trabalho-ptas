@@ -5,7 +5,7 @@ const controller = require('../controllers/controllers')
 router.post('/add', controller.post)
 router.put('/:id', controller.put)
 router.delete('/:id', controller.delete)
-router.get('/:id', controller.get)
+router.get('/:id', controller.busca)
 
 
 

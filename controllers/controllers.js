@@ -34,7 +34,7 @@ exports.delete = ('/:id', (req, res) => {
     musicas.splice(index, 1);
     res.json({ mensagem: 'Musica removida com sucesso' });
   });
-exports.get = ('/:id', (req, res) => {
+exports.busca = ('/:id', (req, res) => {
     const musica = musicas.find(m => m.id === parseInt(req.params.id));
     if (!musica) return res.status(404).json({ erro: 'musica não encontrada' });
     res.json(musica);
